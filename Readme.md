@@ -22,7 +22,7 @@ submit it.
 # List of Implemented Features
 
 **1. Refraction (Snell’s Law)**
-    ● **What it does:** Allows light to pass through objects, bending the ray direction based on
+    #● **What it does:** Allows light to pass through objects, bending the ray direction based on
        the material's Index of Refraction (IOR). This creates the realistic distortion seen in the
        diamonds and rubies.
     ● **Where it is applied:**
