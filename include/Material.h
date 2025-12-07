@@ -9,5 +9,8 @@ struct Material
   Eigen::Vector3d ka,kd,ks,km;
   // Phong exponent
   double phong_exponent;
+  bool is_refractive = false;
+  double ior = 1.0;
+
 };
 #endif

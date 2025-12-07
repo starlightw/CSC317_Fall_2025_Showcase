@@ -1,0 +1,19 @@
+# ninja log v6
+6	32	7867836619534951	D:/Programming/CSC317_labs/lab3/computer-graphics-ray-tracing/out/build/x64-Debug/CMakeFiles/cmake.verify_globs	8bd413be27a400a8
+122	1989	7866139811863227	CMakeFiles/hw2.dir/src/write_ppm.cpp.obj	b7cd9fa84d2e4a0f
+69	2105	7867791755431936	CMakeFiles/raytracing.dir/src/raycolor.cpp.obj	3f5cd9f719428b6f
+42	2347	7867728468871346	CMakeFiles/hw2.dir/src/Plane.cpp.obj	ce016b05e4404c72
+73	2621	7867728469180520	CMakeFiles/hw2.dir/src/Triangle.cpp.obj	5b9696b9f4e0cc72
+118	2422	7867728469629548	CMakeFiles/hw2.dir/src/viewing_ray.cpp.obj	30057ecfa52c33bf
+36	1683	7867793948781886	CMakeFiles/raytracing.dir/src/blinn_phong_shading.cpp.obj	2135e63cecc3308f
+88	2042	7867728469330081	CMakeFiles/hw2.dir/src/TriangleSoup.cpp.obj	40d74423d0d86678
+56	2484	7867728469020904	CMakeFiles/hw2.dir/src/Sphere.cpp.obj	90a06f9fb48b28d8
+141	2084	7866139812052708	CMakeFiles/raytracing.dir/src/PointLight.cpp.obj	a2f70824b7d49479
+103	2076	7867728469479726	CMakeFiles/hw2.dir/src/first_hit.cpp.obj	50f1aab996f5918c
+131	2075	7866139811952983	CMakeFiles/raytracing.dir/src/DirectionalLight.cpp.obj	fa6b11a4bed17b06
+172	2399	7866139812371857	CMakeFiles/raytracing.dir/src/reflect.cpp.obj	b9ff6117c3277928
+53	136	7867733167553361	hw2.lib	cc2becedbae1d0b2
+156	4251	7867728470018231	CMakeFiles/raytracing.dir/main.cpp.obj	af7d1790da759dbd
+1684	1828	7867793965258744	raytracing.exe	a9f05c96f8424b54
+34	55	7865885029191268	clean	8c45b54705a541e8
+5	35	7867849408654778	D:/Programming/CSC317_labs/lab3/computer-graphics-ray-tracing/out/build/x64-Debug/CMakeFiles/cmake.verify_globs	8bd413be27a400a8

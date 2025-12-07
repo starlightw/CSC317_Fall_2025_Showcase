@@ -1,17 +1,969 @@
 {
   "camera": {
     "type": "perspective",
-    "focal_length": 3,
-    "eye": [0,0,5],
-    "up": [0,1,0],
-    "look": [0,0,-1],
-    "height": 1,
-    "width": 1.7777777778
+    "focal_length": 3.0,
+    "eye": [ 0.0, 2.0, 30.0 ],
+    "up": [ 0.0, 1.0, 0.0 ],
+    "look": [ 0.0, -0.07, -1.0 ],
+    "height": 1.0,
+    "width": 1.6
   },
   "materials": [
+    {
+      "name": "matte_white",
+      "ka": [ 0.1, 0.1, 0.1 ],
+      "kd": [ 0.95, 0.95, 0.95 ],
+      "ks": [ 0.05, 0.05, 0.05 ],
+      "km": [ 0.0, 0.0, 0.0 ],
+      "phong_exponent": 20,
+      "is_refractive": false,
+      "ior": 1.0
+    },
+    {
+      "name": "center_sphere",
+      "ka": [ 0.05, 0.05, 0.1 ],
+      "kd": [ 0.1, 0.2, 0.9 ],
+      "ks": [ 0.9, 0.9, 0.9 ],
+      "km": [ 0.0, 0.0, 0.0 ],
+      "phong_exponent": 100,
+      "is_refractive": true,
+      "ior": 1.5
+    },
+    {
+      "name": "large_diamond",
+      "ka": [ 0.0, 0.0, 0.0 ],
+      "kd": [ 0.95, 0.95, 1.0 ],
+      "ks": [ 0.95, 0.95, 0.95 ],
+      "km": [ 0.0, 0.0, 0.0 ],
+      "phong_exponent": 300,
+      "is_refractive": true,
+      "ior": 2.4
+    },
+    {
+      "name": "small_ruby",
+      "ka": [ 0.0, 0.0, 0.0 ],
+      "kd": [ 0.9, 0.1, 0.1 ],
+      "ks": [ 0.9, 0.9, 0.9 ],
+      "km": [ 0.0, 0.0, 0.0 ],
+      "phong_exponent": 200,
+      "is_refractive": true,
+      "ior": 1.76
+    }
   ],
-  "lights":[
+  "lights": [
+    {
+      "type": "point",
+      "position": [ 5.0, 5.0, 5.0 ],
+      "color": [ 1, 1, 1 ]
+    }
   ],
   "objects": [
+    {
+      "type": "sphere",
+      "material": "center_sphere",
+      "center": [ 0.0, 0.0, 0.0 ],
+      "radius": 1.5
+    },
+    {
+      "type": "plane",
+      "material": "matte_white",
+      "point": [ 0.0, -5.0, 0.0 ],
+      "normal": [ 0.0, 1.0, 0.0 ]
+    },
+    {
+      "type": "plane",
+      "material": "matte_white",
+      "point": [ 0.0, 0.0, -15.0 ],
+      "normal": [ 0.0, 0.0, 1.0 ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 5, 0 ],
+        [ 1.5, 3.5, 0 ],
+        [ 0, 3.5, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 5, 0 ],
+        [ 0, 3.5, 1.5 ],
+        [ -1.5, 3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 5, 0 ],
+        [ -1.5, 3.5, 0 ],
+        [ 0, 3.5, -1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 5, 0 ],
+        [ 0, 3.5, -1.5 ],
+        [ 1.5, 3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 2, 0 ],
+        [ 0, 3.5, 1.5 ],
+        [ 1.5, 3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 2, 0 ],
+        [ -1.5, 3.5, 0 ],
+        [ 0, 3.5, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 2, 0 ],
+        [ 0, 3.5, -1.5 ],
+        [ -1.5, 3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, 2, 0 ],
+        [ 1.5, 3.5, 0 ],
+        [ 0, 3.5, -1.5 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -2, 0 ],
+        [ 1.5, -3.5, 0 ],
+        [ 0, -3.5, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -2, 0 ],
+        [ 0, -3.5, 1.5 ],
+        [ -1.5, -3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -2, 0 ],
+        [ -1.5, -3.5, 0 ],
+        [ 0, -3.5, -1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -2, 0 ],
+        [ 0, -3.5, -1.5 ],
+        [ 1.5, -3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -5, 0 ],
+        [ 0, -3.5, 1.5 ],
+        [ 1.5, -3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -5, 0 ],
+        [ -1.5, -3.5, 0 ],
+        [ 0, -3.5, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -5, 0 ],
+        [ 0, -3.5, -1.5 ],
+        [ -1.5, -3.5, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 0, -5, 0 ],
+        [ 1.5, -3.5, 0 ],
+        [ 0, -3.5, -1.5 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, 1.5, 0 ],
+        [ -2, 0, 0 ],
+        [ -3.5, 0, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, 1.5, 0 ],
+        [ -3.5, 0, 1.5 ],
+        [ -5, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, 1.5, 0 ],
+        [ -5, 0, 0 ],
+        [ -3.5, 0, -1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, 1.5, 0 ],
+        [ -3.5, 0, -1.5 ],
+        [ -2, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, -1.5, 0 ],
+        [ -3.5, 0, 1.5 ],
+        [ -2, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, -1.5, 0 ],
+        [ -5, 0, 0 ],
+        [ -3.5, 0, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, -1.5, 0 ],
+        [ -3.5, 0, -1.5 ],
+        [ -5, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ -3.5, -1.5, 0 ],
+        [ -2, 0, 0 ],
+        [ -3.5, 0, -1.5 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, 1.5, 0 ],
+        [ 5, 0, 0 ],
+        [ 3.5, 0, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, 1.5, 0 ],
+        [ 3.5, 0, 1.5 ],
+        [ 2, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, 1.5, 0 ],
+        [ 2, 0, 0 ],
+        [ 3.5, 0, -1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, 1.5, 0 ],
+        [ 3.5, 0, -1.5 ],
+        [ 5, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, -1.5, 0 ],
+        [ 3.5, 0, 1.5 ],
+        [ 5, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, -1.5, 0 ],
+        [ 2, 0, 0 ],
+        [ 3.5, 0, 1.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, -1.5, 0 ],
+        [ 3.5, 0, -1.5 ],
+        [ 2, 0, 0 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "large_diamond",
+      "corners": [
+        [ 3.5, -1.5, 0 ],
+        [ 5, 0, 0 ],
+        [ 3.5, 0, -1.5 ]
+      ]
+    },
+
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 3.4, 0.5 ],
+        [ 2.8, 2.8, 0.5 ],
+        [ 2.2, 2.8, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 3.4, 0.5 ],
+        [ 2.2, 2.8, 1.1 ],
+        [ 1.6, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 3.4, 0.5 ],
+        [ 1.6, 2.8, 0.5 ],
+        [ 2.2, 2.8, -0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 3.4, 0.5 ],
+        [ 2.2, 2.8, -0.1 ],
+        [ 2.8, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 2.2, 0.5 ],
+        [ 2.2, 2.8, 1.1 ],
+        [ 2.8, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 2.2, 0.5 ],
+        [ 1.6, 2.8, 0.5 ],
+        [ 2.2, 2.8, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 2.2, 0.5 ],
+        [ 2.2, 2.8, -0.1 ],
+        [ 1.6, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, 2.2, 0.5 ],
+        [ 2.8, 2.8, 0.5 ],
+        [ 2.2, 2.8, -0.1 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 2.8, -0.5 ],
+        [ 3.4, 2.2, -0.5 ],
+        [ 2.8, 2.2, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 2.8, -0.5 ],
+        [ 2.8, 2.2, 0.1 ],
+        [ 2.2, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 2.8, -0.5 ],
+        [ 2.2, 2.2, -0.5 ],
+        [ 2.8, 2.2, -1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 2.8, -0.5 ],
+        [ 2.8, 2.2, -1.1 ],
+        [ 3.4, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 1.6, -0.5 ],
+        [ 2.8, 2.2, 0.1 ],
+        [ 3.4, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 1.6, -0.5 ],
+        [ 2.2, 2.2, -0.5 ],
+        [ 2.8, 2.2, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 1.6, -0.5 ],
+        [ 2.8, 2.2, -1.1 ],
+        [ 2.2, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, 1.6, -0.5 ],
+        [ 3.4, 2.2, -0.5 ],
+        [ 2.8, 2.2, -1.1 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 3.4, 0.5 ],
+        [ -1.6, 2.8, 0.5 ],
+        [ -2.2, 2.8, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 3.4, 0.5 ],
+        [ -2.2, 2.8, 1.1 ],
+        [ -2.8, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 3.4, 0.5 ],
+        [ -2.8, 2.8, 0.5 ],
+        [ -2.2, 2.8, -0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 3.4, 0.5 ],
+        [ -2.2, 2.8, -0.1 ],
+        [ -1.6, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 2.2, 0.5 ],
+        [ -2.2, 2.8, 1.1 ],
+        [ -1.6, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 2.2, 0.5 ],
+        [ -2.8, 2.8, 0.5 ],
+        [ -2.2, 2.8, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 2.2, 0.5 ],
+        [ -2.2, 2.8, -0.1 ],
+        [ -2.8, 2.8, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, 2.2, 0.5 ],
+        [ -1.6, 2.8, 0.5 ],
+        [ -2.2, 2.8, -0.1 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 2.8, -0.5 ],
+        [ -2.2, 2.2, -0.5 ],
+        [ -2.8, 2.2, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 2.8, -0.5 ],
+        [ -2.8, 2.2, 0.1 ],
+        [ -3.4, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 2.8, -0.5 ],
+        [ -3.4, 2.2, -0.5 ],
+        [ -2.8, 2.2, -1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 2.8, -0.5 ],
+        [ -2.8, 2.2, -1.1 ],
+        [ -2.2, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 1.6, -0.5 ],
+        [ -2.8, 2.2, 0.1 ],
+        [ -2.2, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 1.6, -0.5 ],
+        [ -3.4, 2.2, -0.5 ],
+        [ -2.8, 2.2, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 1.6, -0.5 ],
+        [ -2.8, 2.2, -1.1 ],
+        [ -3.4, 2.2, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, 1.6, -0.5 ],
+        [ -2.2, 2.2, -0.5 ],
+        [ -2.8, 2.2, -1.1 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -1.6, 0.5 ],
+        [ 2.8, -2.2, 0.5 ],
+        [ 2.2, -2.2, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -1.6, 0.5 ],
+        [ 2.2, -2.2, 1.1 ],
+        [ 1.6, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -1.6, 0.5 ],
+        [ 1.6, -2.2, 0.5 ],
+        [ 2.2, -2.2, -0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -1.6, 0.5 ],
+        [ 2.2, -2.2, -0.1 ],
+        [ 2.8, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -2.8, 0.5 ],
+        [ 2.2, -2.2, 1.1 ],
+        [ 2.8, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -2.8, 0.5 ],
+        [ 1.6, -2.2, 0.5 ],
+        [ 2.2, -2.2, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -2.8, 0.5 ],
+        [ 2.2, -2.2, -0.1 ],
+        [ 1.6, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.2, -2.8, 0.5 ],
+        [ 2.8, -2.2, 0.5 ],
+        [ 2.2, -2.2, -0.1 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -2.2, -0.5 ],
+        [ 3.4, -2.8, -0.5 ],
+        [ 2.8, -2.8, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -2.2, -0.5 ],
+        [ 2.8, -2.8, 0.1 ],
+        [ 2.2, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -2.2, -0.5 ],
+        [ 2.2, -2.8, -0.5 ],
+        [ 2.8, -2.8, -1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -2.2, -0.5 ],
+        [ 2.8, -2.8, -1.1 ],
+        [ 3.4, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -3.4, -0.5 ],
+        [ 2.8, -2.8, 0.1 ],
+        [ 3.4, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -3.4, -0.5 ],
+        [ 2.2, -2.8, -0.5 ],
+        [ 2.8, -2.8, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -3.4, -0.5 ],
+        [ 2.8, -2.8, -1.1 ],
+        [ 2.2, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ 2.8, -3.4, -0.5 ],
+        [ 3.4, -2.8, -0.5 ],
+        [ 2.8, -2.8, -1.1 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -1.6, 0.5 ],
+        [ -1.6, -2.2, 0.5 ],
+        [ -2.2, -2.2, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -1.6, 0.5 ],
+        [ -2.2, -2.2, 1.1 ],
+        [ -2.8, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -1.6, 0.5 ],
+        [ -2.8, -2.2, 0.5 ],
+        [ -2.2, -2.2, -0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -1.6, 0.5 ],
+        [ -2.2, -2.2, -0.1 ],
+        [ -1.6, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -2.8, 0.5 ],
+        [ -2.2, -2.2, 1.1 ],
+        [ -1.6, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -2.8, 0.5 ],
+        [ -2.8, -2.2, 0.5 ],
+        [ -2.2, -2.2, 1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -2.8, 0.5 ],
+        [ -2.2, -2.2, -0.1 ],
+        [ -2.8, -2.2, 0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.2, -2.8, 0.5 ],
+        [ -1.6, -2.2, 0.5 ],
+        [ -2.2, -2.2, -0.1 ]
+      ]
+    },
+
+
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -2.2, -0.5 ],
+        [ -2.2, -2.8, -0.5 ],
+        [ -2.8, -2.8, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -2.2, -0.5 ],
+        [ -2.8, -2.8, 0.1 ],
+        [ -3.4, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -2.2, -0.5 ],
+        [ -3.4, -2.8, -0.5 ],
+        [ -2.8, -2.8, -1.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -2.2, -0.5 ],
+        [ -2.8, -2.8, -1.1 ],
+        [ -2.2, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -3.4, -0.5 ],
+        [ -2.8, -2.8, 0.1 ],
+        [ -2.2, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -3.4, -0.5 ],
+        [ -3.4, -2.8, -0.5 ],
+        [ -2.8, -2.8, 0.1 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -3.4, -0.5 ],
+        [ -2.8, -2.8, -1.1 ],
+        [ -3.4, -2.8, -0.5 ]
+      ]
+    },
+    {
+      "type": "triangle",
+      "material": "small_ruby",
+      "corners": [
+        [ -2.8, -3.4, -0.5 ],
+        [ -2.2, -2.8, -0.5 ],
+        [ -2.8, -2.8, -1.1 ]
+      ]
+    }
   ]
 }
